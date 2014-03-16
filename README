@@ -1,0 +1,25 @@
+# Nihon Taiko Dojo Website
+# ------------------------
+# Site files for the Nihon Taiko Dojo Website.
+# Original design and code by Joe Mignano and Adam Toda
+#
+# Version 1.0
+
+
+
+
+# Git Initialization
+# ------------------
+
+$ mkdir ~/nihon-taiko-dojo
+# Creates a new directory for your project called "nihon-taiko-dojo" 
+# in your user directory
+
+$ cd ~/nihon-taiko-dojo
+# Changes the current working directory to your newly created directory
+
+$ git init
+# Sets up the necessary Git files
+
+$ touch README
+# Creates a file called "README" in your nihon-taiko-dojo directory
