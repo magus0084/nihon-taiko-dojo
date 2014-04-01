@@ -1,0 +1,422 @@
+/******************************************************************
+Site Name:
+Author: Joe Mignano and Adam Toda
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html, body {
+	@extend .full-screen;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: $sans-serif;
+	font-size: 100%;
+	line-height: 1.5;
+	color: $text-color;
+	background-color: $gray;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-family: serif;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+	color: $light-yellow;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+	color: $white;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+	color: $light-yellow;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {
+	width: 100%;
+	background-color: $black;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	font-family: $serif;
+	@include box-sizing(border-box);
+}
+
+	#nav-logo {
+		display: inline-block;
+		padding: 0.75em 0;
+
+		a {
+			color: $white;
+		}
+	}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.nav {
+	
+	#nav-logo {
+		width: 7em;
+		height: auto;
+	}
+	
+	#navigation-list {
+		display: none;
+	}
+	
+	.nav-left {
+		float: left;
+		text-align: left;
+	}
+	
+	.nav-right {
+		float: right;
+	}
+	
+	li {
+		margin-left: 2em;
+
+		a {
+			display: block;
+			color: $white;
+			text-decoration: none;
+			padding: 0.75em;
+			font-weight: bold;
+
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+
+			}
+		}
+
+		&:first-child {}
+
+		&:last-child {}
+
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+
+			li {
+
+				a {
+					padding-left: 30px;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+
+				}
+
+				&:first-child {}
+
+				&:last-child {}
+
+			}
+
+		}
+
+	} /* end .menu li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current-page-ancestor {
+
+		a {}
+
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+
+
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+
+.comment-respond {
+	@extend .cf;
+	padding: 1.5em;
+	border-top: 1px solid $light-gray;
+}
+
+	.comment-form-comment {
+		margin: 1.5em 0 0.75em;
+	}
+
+	/* comment submit button */
+	#submit {
+		@extend .blue-btn;
+		float: right;
+		font-size: 1em;
+	}
+
+
+/***********************
+SLIDESHOWS
+***********************/
+
+.slideshow {
+	margin: 0;
+	
+	li {
+		width: 100%;
+		z-index: 1;
+		display: none;
+
+		&.slideshow-current-slide { 
+			display: block; 
+		}
+		
+		img {
+			border: 0.8em solid $dark-gray;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&.full-screen {
+		li {
+			@extend .full-screen;
+			@include background-size(cover);
+		}
+	}
+}
+
+
+.slideshow-controls {
+	text-align: center;
+	margin: 0;
+	
+	li {
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		margin: 0.5em 0.75em;
+		border-radius: 2em;
+		border: 2px solid $light-gray;
+		
+		&.slideshow-current-slide {
+			background-color: $light-gray;
+		}
+	}
+}
+
+
+/* SLIDESHOW IMAGES */
+/* ---------------- */
+
+/* TOP */
+#top-image-1 { background-image: url($image-directory + 'top_img1.jpg') }
+#top-image-2 { background-image: url($image-directory + 'top_img2.jpg') }
+#top-image-3 { background-image: url($image-directory + 'top_img3.jpg') }
+#top-image-4 { background-image: url($image-directory + 'top_img4.jpg') }
+
+
+/******************************
+SECTION CONTENT GENERAL STYLES
+******************************/
+
+.section {
+	width: 100%;
+	background-color: $dark-gray;
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding-top: 10em;
+}
+
+/* SECTION IMAGES */
+#section-about { background-image: url($image-directory + 'about_feature.jpg'); }
+#section-sensei { background-image: url($image-directory + 'sensei_feature.jpg'); }
+#section-pieces { background-image: url($image-directory + 'pieces_feature.jpg'); }
+#section-lessons { background-image: url($image-directory + 'lessons_feature.jpg'); }
+#section-contact { background-image: url($image-directory + 'contact_feature.jpg'); }
+
+.section-content-wrapper {
+	width: 100%;
+	margin-top: 10em;
+	@include css-gradient(rgba(51,51,51, 0.7) 0%, rgba(51,51,51,1) 200px); 
+	padding-bottom: 3em;
+}
+
+.section-content-text {
+	padding-right: 3em;
+}
+
+
+/***********************
+SIDE GALLERIES & ASIDES
+***********************/
+
+.section-content-image {
+	
+	img {
+		border: 5px solid $dark-gray;
+	}
+}
+
+
+
+/***********************
+TOP SECTION
+***********************/
+#top {
+	@extend .full-screen;
+}
+
+#top-logo {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -1.5em;
+	height: 5em;
+	width: 100%;
+	text-align: center;
+
+	img {
+		height: 100%;
+		width: auto;
+	}
+}
+
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	background-color: $black;
+	color: $light-gray;
+	padding: 1em;
+}
+
+	/*
+	if you checked out the link above:
+	http://www.alistapart.com/articles/organizing-mobile/
+	you'll want to style the footer nav
+	a bit more in-depth. Remember to keep
+	it simple because you'll have to
+	override these styles for the desktop
+	view.
+	*/
+	.footer-links {
+
+		ul {
+
+			li {}
+
+		}
+
+	} /* end .footer-links */
+
+
+	.copyright {}
