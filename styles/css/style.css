@@ -618,6 +618,13 @@ BACKGROUND-SIZE
 /*********************
 BOX SHADOW
 *********************/
+/*********************
+IMAGES
+*********************/
+.full-width-image, .full-width-images img, .slideshow li img {
+  width: 100%;
+  height: auto; }
+
 /**********************
 GENERAL LAYOUT
 **********************/
@@ -691,7 +698,11 @@ them however you see fit.
   .m-3of4 {
     float: left;
     padding-right: 0.75em;
-    width: 75%; } }
+    width: 75%; }
+
+  .m-last {
+    float: right;
+    padding-right: 0; } }
 /* Portrait tablet to landscape */
 @media (min-width: 768px) and (max-width: 1029px) {
   .t-all {
@@ -742,7 +753,11 @@ them however you see fit.
   .t-4of5 {
     float: left;
     padding-right: 0.75em;
-    width: 80%; } }
+    width: 80%; }
+
+  .t-last {
+    float: right;
+    padding-right: 0; } }
 /* Landscape to small desktop */
 @media (min-width: 1030px) {
   .d-all {
@@ -853,7 +868,11 @@ them however you see fit.
   .d-1of12 {
     float: left;
     padding-right: 0.75em;
-    width: 8.33%; } }
+    width: 8.33%; }
+
+  .d-last {
+    float: right;
+    padding-right: 0; } }
 /*********************
 IMPORTING MODULES
 Modules are reusable blocks or elements we use throughout the project.
@@ -1428,9 +1447,7 @@ SLIDESHOWS
     .slideshow li.slideshow-current-slide {
       display: block; }
     .slideshow li img {
-      border: 0.8em solid #333333;
-      width: 100%;
-      height: auto; }
+      border: 0.8em solid #333333; }
   .slideshow.full-screen li, html.slideshow li, body.slideshow li, .slideshow#top li {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1515,8 +1532,10 @@ SIDE GALLERIES & ASIDES
   border: 5px solid #333333; }
 
 /***********************
-TOP SECTION
+SECTION SPECIFIC STYLES
 ***********************/
+/* TOP */
+/* --- */
 #top-logo {
   position: absolute;
   top: 50%;
@@ -1528,6 +1547,12 @@ TOP SECTION
   #top-logo img {
     height: 100%;
     width: auto; }
+
+/* PIECES */
+/* ------ */
+#section-pieces .section-content-text {
+  margin-bottom: 4em;
+  padding-right: 0; }
 
 /*********************
 FOOTER STYLES
@@ -1729,6 +1754,9 @@ you can add resource intensive styles.
   ***********************/
   .section {
     padding-top: 15em; }
+
+  #section-pieces .section-content-text {
+    margin-bottom: 0; }
 
   /***********************
   SIDE GALLERIES & ASIDES

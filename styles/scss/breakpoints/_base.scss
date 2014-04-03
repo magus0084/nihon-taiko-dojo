@@ -39,6 +39,12 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
+.full-width-images {
+	img {
+		@extend .full-width-image;
+	}
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -274,9 +280,8 @@ SLIDESHOWS
 		}
 		
 		img {
+			@extend .full-width-image;
 			border: 0.8em solid $dark-gray;
-			width: 100%;
-			height: auto;
 		}
 	}
 
@@ -365,8 +370,12 @@ SIDE GALLERIES & ASIDES
 
 
 /***********************
-TOP SECTION
+SECTION SPECIFIC STYLES
 ***********************/
+
+/* TOP */
+/* --- */
+
 #top {
 	@extend .full-screen;
 }
@@ -383,6 +392,17 @@ TOP SECTION
 	img {
 		height: 100%;
 		width: auto;
+	}
+}
+
+
+/* PIECES */
+/* ------ */
+
+#section-pieces {
+	.section-content-text {
+		margin-bottom: 4em;
+		padding-right: 0;
 	}
 }
 

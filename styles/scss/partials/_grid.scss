@@ -37,6 +37,11 @@ over your project's layout.
   padding-right: 0;
 }
 
+// Mixin to include in other sizes
+@mixin last-col {
+  float: right;
+  padding-right: 0;
+}
 
 /*
 Mobile Grid Styles
@@ -74,6 +79,10 @@ them however you see fit.
   .m-3of4 {
     @include grid-col;
     width: 75%;
+  }
+  
+  .m-last {
+  	@include last-col;
   }
 
 } // end mobile styles
@@ -130,6 +139,10 @@ them however you see fit.
   .t-4of5 {
     @include grid-col;
     width: 80%;
+  }
+  
+  .t-last {
+  	@include last-col;
   }
 
 } // end tablet
@@ -245,6 +258,10 @@ them however you see fit.
   .d-1of12 {
     @include grid-col;
     width: 8.33%;
+  }
+  
+  .d-last {
+  	@include last-col;
   }
 
 } // end desktop styles
