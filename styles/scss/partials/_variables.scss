@@ -44,7 +44,7 @@ $yellow:			#fdbf5d;
 $link-color:        $yellow;
 $link-hover:        darken($link-color, 9%);
 
-$border-color:      #ccc;
+$border-color:      #222222;
 $disabled-gray:     #cfcfcf;
 
 
@@ -66,3 +66,11 @@ TRANSITIONS
 
 $fast-transition:	all 0.3s ease-in-out;
 $medium-transition:	all 0.5s ease-in-out;
+
+
+/**********************
+OTHER
+**********************/
+
+$media-border:		6px solid $dark-gray;
+$table-border:		6px solid $border-color;
