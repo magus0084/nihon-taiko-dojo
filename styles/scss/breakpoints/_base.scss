@@ -247,25 +247,119 @@ NAVIGATION STYLES
 
 
 /******************************************************************
-COMMENT FORM STYLES
+CONTACT FORM STYLES
 ******************************************************************/
 
-.comment-respond {
-	@extend .cf;
-	padding: 1.5em;
-	border-top: 1px solid $light-gray;
+#contactForm {
+  	padding-left: 1em;
+
+	.input-container {
+	  	position: relative;
+	  	width: 100%;
+	  	max-width: 400px;
+	}
+	
+	.hasTextarea {
+	  	max-width: 100% !important;
+	}
+	
+	label {
+	  	color: #fed167;
+	  	font-weight: bold;
+	  	line-height: 1.7;
+	  	font-size: 1.2em;
+	}
+	
+	& input, & select, & textarea {
+		font-family: sans-serif !important;
+		background-color: $form-gray;
+		opacity: 0.9;
+		@include transition($medium-transition);
+		
+		&:focus {
+			background-color: darken($form-gray, 10%);
+		}
+	}
 }
 
-	.comment-form-comment {
-		margin: 1.5em 0 0.75em;
-	}
+.ajaxSpinner {
+  display: none;
+  padding: 1em;
+}
+.formSubmitSuccessMsg {
+  display: none;
+}
 
-	/* comment submit button */
-	#submit {
-		@extend .blue-btn;
-		float: right;
-		font-size: 1em;
+
+.parsley-error-list {
+	span {
+  		position: absolute;
+  		top: -10px;
+  		right: 4px;
+  		color: #fff;
+  		font-weight: bold;
+  		min-height: 20px;
+  		line-height: 20px;
+  		padding: 10px;
+  		font-size: 0.9em;
+  		text-align: center;
+  		background: rgba(0, 0, 0, 0.667);
+  		border: none;
+  		border-radius: 5px;
+  		text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  		box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px 0px;
 	}
+	
+	&:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-width: 10px;
+		border-style: solid;
+		border-color: rgba(0, 0, 0, 0.667) transparent transparent transparent;
+		right: 2em;
+		top: 30px;
+	}
+}
+
+textarea ~ .parsley-error-list span {
+	float: right;
+	max-width: 100%;
+	
+	&:after {
+		top: -20px;
+		left: auto;
+	  	right: 2em;
+	  	border-color: transparent transparent rgba(0, 0, 0, 0.667);
+	}
+}
+
+.parsley-error {
+  background-color: #f58080 !important;
+}
+
+#contact_sendBtn {
+  	font-size: 1.333em;
+  	font-weight: bold;
+  	text-decoration: none;
+  	display: block;
+  	float: left;
+  	width: 9em;
+  	text-align: center;
+  	background-color: #fcbe5d;
+  	color: #7e5f2f;
+  	font-family: $sans-serif;
+  	text-transform: uppercase;
+  	margin: 0.413em 0;
+  	padding: 8px 16px;
+  	border-radius: 6px;
+	@include transition($fast-transition);
+	
+	&:hover {
+		background-color: #DDA254;
+	}
+}
 
 
 /***********************
@@ -310,6 +404,12 @@ SLIDESHOWS
 		margin: 0.5em 0.75em;
 		border-radius: 2em;
 		border: 2px solid $light-gray;
+		@include transition($fast-transition);
+		
+		&:hover {
+			background-color: $yellow;
+			cursor: pointer;
+		}
 		
 		&.selected {
 			background-color: $light-gray;

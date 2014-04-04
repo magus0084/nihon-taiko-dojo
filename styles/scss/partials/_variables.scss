@@ -28,6 +28,7 @@ $white:             #fff;
 $light-gray:        #bfbfbf;
 $gray:              #eaedf2;
 $dark-gray:			#333333;
+$form-gray:			#808080;
 $text-color:        $white;
 $meta-gray:         #9fa6b4;
 
@@ -58,3 +59,10 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+
+/**********************
+TRANSITIONS
+**********************/
+
+$fast-transition:	all 0.3s ease-in-out;
+$medium-transition:	all 0.5s ease-in-out;

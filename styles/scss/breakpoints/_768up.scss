@@ -61,7 +61,8 @@ NAVIGATION STYLES
 
 		a {
 			border-bottom: 0;
-
+			@include transition($fast-transition);
+			
 			/*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
@@ -145,6 +146,21 @@ NAVIGATION STYLES
 
 } /* end .nav */
 
+/***********************
+SLIDESHOWS
+***********************/
+
+.slideshow-controls {
+	
+	li {
+		@include transition($fast-transition);
+		
+		&:hover {
+			background-color: $yellow;
+			cursor: pointer;
+		}
+	}
+}
 
 /***********************
 CONTENT SECTIONS

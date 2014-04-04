@@ -421,12 +421,12 @@ table {
   white-space: nowrap;
   overflow: hidden; }
 
-.clearfix, .cf, .comment-respond {
+.clearfix, .cf {
   zoom: 1; }
-  .clearfix:before, .clearfix:after, .cf:before, .comment-respond:before, .cf:after, .comment-respond:after {
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
     content: "";
     display: table; }
-  .clearfix:after, .cf:after, .comment-respond:after {
+  .clearfix:after, .cf:after {
     clear: both; }
 
 /*
@@ -462,6 +462,9 @@ Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
 */
+/**********************
+TRANSITIONS
+**********************/
 /******************************************************************
 Site Name: Nihon Taiko Dojo
 Author: Joe Mignano and Adam Toda
@@ -938,7 +941,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, #submit {
+.blue-btn {
   display: inline-block;
   position: relative;
   font-family: "Hiragino Kaku Gothic Pro", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -957,10 +960,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   -ms-transition: background-color 0.14s ease-in-out;
   -o-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, #submit:hover, .blue-btn:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     color: white;
     text-decoration: none; }
-  .blue-btn:active, #submit:active {
+  .blue-btn:active {
     top: 1px; }
 
 /*
@@ -968,11 +971,11 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.blue-btn, #submit {
+.blue-btn {
   background-color: #2980b9; }
-  .blue-btn:hover, #submit:hover, .blue-btn:focus, #submit:focus {
+  .blue-btn:hover, .blue-btn:focus {
     background-color: #2574a8; }
-  .blue-btn:active, #submit:active {
+  .blue-btn:active {
     background-color: #2472a4; }
 
 /******************************************************************
@@ -1427,19 +1430,101 @@ NAVIGATION STYLES
 
 /* end .nav */
 /******************************************************************
-COMMENT FORM STYLES
+CONTACT FORM STYLES
 ******************************************************************/
-.comment-respond {
-  padding: 1.5em;
-  border-top: 1px solid #bfbfbf; }
+#contactForm {
+  padding-left: 1em; }
+  #contactForm .input-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; }
+  #contactForm .hasTextarea {
+    max-width: 100% !important; }
+  #contactForm label {
+    color: #fed167;
+    font-weight: bold;
+    line-height: 1.7;
+    font-size: 1.2em; }
+  #contactForm input, #contactForm select, #contactForm textarea {
+    font-family: sans-serif !important;
+    background-color: gray;
+    opacity: 0.9;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+    #contactForm input:focus, #contactForm select:focus, #contactForm textarea:focus {
+      background-color: #676767; }
 
-.comment-form-comment {
-  margin: 1.5em 0 0.75em; }
+.ajaxSpinner {
+  display: none;
+  padding: 1em; }
 
-/* comment submit button */
-#submit {
+.formSubmitSuccessMsg {
+  display: none; }
+
+.parsley-error-list span {
+  position: absolute;
+  top: -10px;
+  right: 4px;
+  color: #fff;
+  font-weight: bold;
+  min-height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.667);
+  border: none;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px 0px; }
+.parsley-error-list:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.667) transparent transparent transparent;
+  right: 2em;
+  top: 30px; }
+
+textarea ~ .parsley-error-list span {
   float: right;
-  font-size: 1em; }
+  max-width: 100%; }
+  textarea ~ .parsley-error-list span:after {
+    top: -20px;
+    left: auto;
+    right: 2em;
+    border-color: transparent transparent rgba(0, 0, 0, 0.667); }
+
+.parsley-error {
+  background-color: #f58080 !important; }
+
+#contact_sendBtn {
+  font-size: 1.333em;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  float: left;
+  width: 9em;
+  text-align: center;
+  background-color: #fcbe5d;
+  color: #7e5f2f;
+  font-family: "Hiragino Kaku Gothic Pro", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 0.413em 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  #contact_sendBtn:hover {
+    background-color: #DDA254; }
 
 /***********************
 SLIDESHOWS
@@ -1470,7 +1555,15 @@ SLIDESHOWS
     height: 0.8em;
     margin: 0.5em 0.75em;
     border-radius: 2em;
-    border: 2px solid #bfbfbf; }
+    border: 2px solid #bfbfbf;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .slideshow-controls li:hover {
+      background-color: #fed167;
+      cursor: pointer; }
     .slideshow-controls li.selected {
       background-color: #bfbfbf; }
 
@@ -1715,6 +1808,11 @@ you can add resource intensive styles.
       /* showing sub-menus */ }
       .nav li a {
         border-bottom: 0;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
         /*
         you can use hover styles here even though this size
         has the possibility of being a mobile device.
@@ -1755,6 +1853,19 @@ you can add resource intensive styles.
         visibility: visible; }
 
   /* end .nav */
+  /***********************
+  SLIDESHOWS
+  ***********************/
+  .slideshow-controls li {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .slideshow-controls li:hover {
+      background-color: #fed167;
+      cursor: pointer; }
+
   /***********************
   CONTENT SECTIONS
   ***********************/
@@ -1931,100 +2042,3 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
-
-
-/* CONTACT FORM STYLE */
-#contactForm {
-  padding-left: 1em;
-}
-#contactForm .input-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-#contactForm .hasTextarea {
-  max-width: 100% !important;
-}
-#contactForm label {
-  color: #fed167;
-  font-weight: bold;
-  line-height: 1.7;
-  font-size: 1.2em;
-}
-#contactForm input, #contactForm select, #contactForm textarea {
-  font-family: sans-serif !important;
-  background-color: #808080;
-  opacity: 0.9;
-}
-
-.ajaxSpinner {
-  display: none;
-  padding: 1em;
-}
-.formSubmitSuccessMsg {
-  display: none;
-}
-
-
-.parsley-error-list span {
-  position: absolute;
-  top: -10px;
-  right: 4px;
-  color: #fff;
-  font-weight: bold;
-  min-height: 20px;
-  line-height: 20px;
-  padding: 10px;
-  font-size: 0.9em;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.667);
-  border: none;
-  border-radius: 5px;
-  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px 0px;
-}
-.parsley-error-list:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-width: 10px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.667) transparent transparent transparent;
-  right: 2em;
-  top: 30px;
-}
-textarea ~ .parsley-error-list span {
-  float: right;
-  max-width: 100%;
-}
-textarea ~ .parsley-error-list span:after {
-  top: -20px;
-  left: auto;
-  right: 2em;
-  border-color: transparent transparent rgba(0, 0, 0, 0.667);
-}
-
-.parsley-error {
-  background-color: #f58080 !important;
-}
-
-#contact_sendBtn {
-  font-size: 1.333em;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-  float: left;
-  width: 9em;
-  text-align: center;
-  background-color: #fcbe5d;
-  color: #7e5f2f;
-  font-family: @baseFontFamilyHeavy;
-  text-transform: uppercase;
-  margin: 0.413em 0;
-  padding: 8px 16px;
-  border-radius: 6px;
-}
-#contact_sendBtn:hover {
-  background-color: #DDA254;
-}
