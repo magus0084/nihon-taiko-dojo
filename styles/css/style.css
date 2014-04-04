@@ -626,6 +626,9 @@ IMAGES
   height: auto; }
 
 /**********************
+HEADER AND NAV
+**********************/
+/**********************
 GENERAL LAYOUT
 **********************/
 .full-screen, html, body, .slideshow.full-screen li, #top {
@@ -1415,6 +1418,9 @@ NAVIGATION STYLES
       the style.scss file where it's relevant. We want to
       keep this file as small as possible!
       */ }
+      .nav li a .selected {
+        color: #fdd79e;
+        border-bottom: 3px solid #fdd79e; }
     .nav li ul.sub-menu li a,
     .nav li ul.children li a {
       padding-left: 30px; }
@@ -1444,7 +1450,7 @@ SLIDESHOWS
     width: 100%;
     z-index: 1;
     display: none; }
-    .slideshow li.slideshow-current-slide {
+    .slideshow li.selected {
       display: block; }
     .slideshow li img {
       border: 0.8em solid #333333; }
@@ -1465,7 +1471,7 @@ SLIDESHOWS
     margin: 0.5em 0.75em;
     border-radius: 2em;
     border: 2px solid #bfbfbf; }
-    .slideshow-controls li.slideshow-current-slide {
+    .slideshow-controls li.selected {
       background-color: #bfbfbf; }
 
 /* SLIDESHOW IMAGES */
@@ -1925,80 +1931,3 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
-
-
-
-/* CONTACT FORM STYLE */
-#contactForm {
-  padding-left: 1em;
-}
-#contactForm .input-container {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-}
-#contactForm .hasTextarea {
-  max-width: 100% !important;
-}
-#contactForm label {
-  color: #fed167;
-  font-weight: bold;
-  line-height: 1.7;
-  font-size: 1.2em;
-}
-#contactForm input, #contactForm select, #contactForm textarea {
-  font-family: sans-serif !important;
-  background-color: #808080;
-  opacity: 0.9;
-}
-
-.ajaxSpinner {
-  display: none;
-}
-.formSubmitSuccessMsg {
-  display: none;
-}
-
-
-.parsley-error-list span {
-  position: absolute;
-  top: -10px;
-  right: 4px;
-  color: #b94a48;
-  max-width: 20em;
-  min-height: 20px;
-  line-height: 20px;
-  padding: 10px;
-  font-size: 0.815em;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.667);
-  border: none;
-  border-radius: 5px;
-  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px 0px;
-}
-.parsley-error-list:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-width: 10px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.667) transparent transparent transparent;
-  right: 2em;
-  top: 30px;
-}
-textarea ~ .parsley-error-list span {
-  float: right;
-  max-width: 100%;
-}
-textarea ~ .parsley-error-list span:after {
-  top: -20px;
-  left: auto;
-  right: 2em;
-  border-color: transparent transparent rgba(0, 0, 0, 0.667);
-}
-
-.parsley-error {
-  background-color: #f58080 !important;
-}

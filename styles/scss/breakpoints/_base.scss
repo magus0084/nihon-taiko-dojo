@@ -181,12 +181,17 @@ NAVIGATION STYLES
 			padding: 0.75em;
 			font-weight: bold;
 
+			.selected {
+				@include selected-nav;
+			}
+			
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
 			the style.scss file where it's relevant. We want to
 			keep this file as small as possible!
 			*/
+			
 			&:hover, &:focus {
 
 			}
@@ -275,7 +280,7 @@ SLIDESHOWS
 		z-index: 1;
 		display: none;
 
-		&.slideshow-current-slide { 
+		&.selected { 
 			display: block; 
 		}
 		
@@ -306,7 +311,7 @@ SLIDESHOWS
 		border-radius: 2em;
 		border: 2px solid $light-gray;
 		
-		&.slideshow-current-slide {
+		&.selected {
 			background-color: $light-gray;
 		}
 	}

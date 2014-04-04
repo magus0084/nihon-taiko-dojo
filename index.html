@@ -53,8 +53,8 @@
 			<img src="images/logo_siteTop.png">
 		</div>
 		<ul id="top-slideshow" class="slideshow full-screen">
-			<li id="top-image-1" class="slideshow-current-slide"></li>
-			<li id="top-image-2" class="slideshow-image"></li>
+			<li id="top-image-1" class="selected"></li>
+			<li id="top-image-2"></li>
 		</ul>
 	</section>
 	
@@ -72,16 +72,64 @@
 				</div>
 				<figure class="m-all t-1of3 d-1of3">
 					<ul id="slideshow-about" class="slideshow">
-						<li class="slideshow-current-slide"><img src="images/about_slider1.jpg"></li>
+						<li class="selected"><img src="images/about_slider1.jpg"></li>
 						<li><img src="images/about_slider2.jpg"></li>
 						<li><img src="images/about_slider3.jpg"></li>
 					</ul>
 					<ul id="slideshow-about-controls" class="slideshow-controls">
-						<li class="slideshow-current-slide"></li>
+						<li class="selected"></li>
 						<li></li>
 						<li></li>
 					</ul>
 				</figure>
+			</article>
+			
+			<article class="section-content wrap cf">
+				<header>
+					<ul class="tabs">
+						<li class="selected">
+							日本での主な活動
+						</li>
+						<li>
+							舞台略歴
+						</li>
+						<li>
+							海外での主な活動
+						</li>
+						<li>
+							海外での主な指導
+						</li>
+						<!--<li>	FACEBOOK PAGE
+							<a href="#">最新情報</a>
+						</li> -->
+					</ul>
+				</header>
+				<article id="performances-japan" class="tab-content selected cf">
+					<ul class="m-all t-1of2 d-1of2">
+						<li>４月　浅草観音うら一葉まつりにて演奏</li>
+						<li>５月　浅草三社祭</li>
+						<li>浅草神社にて奉納演奏</li>
+						<li>千束商店街にて演奏</li>
+					</ul>
+					<ul class="m-all t-1of2 d-1of2">
+						<li>７月　千束小学校にて盆太鼓演奏</li>
+						<li>８月　浅草千束通り納涼大会にて演奏</li>
+						<li>他、学校や施設イベント等で活動</li>
+					</ul>
+				</article>
+
+				<article id="concert-history">
+					
+				</article>
+				<article id="performances-overseas">
+					
+				</article>
+				<article id="affiliated-groups">
+					
+				</article>
+				<article id="news">
+					
+				</article>
 			</article>
 		</div>
 	</section>
@@ -113,12 +161,12 @@
 				</div>
 				<figure class="m-all t-1of3 d-1of3">
 					<ul id="slideshow-sensei" class="slideshow">
-						<li class="slideshow-current-slide"><img src="images/sensei_slider1.jpg"></li>
+						<li class="selected"><img src="images/sensei_slider1.jpg"></li>
 						<li><img src="images/sensei_slider2.jpg"></li>
 						<li><img src="images/sensei_slider3.jpg"></li>
 					</ul>
 					<ul id="slideshow-sensei-controls" class="slideshow-controls">
-						<li class="slideshow-current-slide"></li>
+						<li class="selected"></li>
 						<li></li>
 						<li></li>
 					</ul>
@@ -258,11 +306,11 @@
 				</div>
 				<figure class="m-all t-1of3 d-1of3">
 					<ul id="slideshow-lessons" class="slideshow">
-						<li class="slideshow-current-slide"><img src="images/lessons_slider1.jpg"></li>
+						<li class="selected"><img src="images/lessons_slider1.jpg"></li>
 						<li><img src="images/sensei_lessons2.jpg"></li>
 					</ul>
 					<ul id="slideshow-lessons-controls" class="slideshow-controls">
-						<li class="slideshow-current-slide"></li>
+						<li class="selected"></li>
 						<li></li>
 					</ul>
 				</figure>
@@ -371,7 +419,7 @@
 		</div>
 	</footer>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libraries/jquery-1.9.1.min.js"><\/script>')</script>
 
     <!--<script src="js/libraries/bootstrap.min.js"></script>-->

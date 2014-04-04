@@ -106,6 +106,14 @@ IMAGES
 
 
 /**********************
+HEADER AND NAV
+**********************/
+@mixin selected-nav {
+	color: $light-yellow;
+	border-bottom: 3px solid $light-yellow;
+}
+
+/**********************
 GENERAL LAYOUT
 **********************/
 
