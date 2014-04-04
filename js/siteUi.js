@@ -10,6 +10,9 @@ var SiteUi = {
         // Load localScroll plugin
         $.localScroll({ duration: 400, easing: 'swing', hash: false });
 
+        // Load scrollspy for nav
+        $('body').scrollspy({ target: '.header' })
+
     },
 
     loadFormValidation: function ( contactFormSelector, postUrl ) {
@@ -102,6 +105,8 @@ var SiteUi = {
             }
         });
     }
+
+
 
 }
 
