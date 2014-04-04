@@ -279,68 +279,79 @@
 				<div class="m-all t-2of3 d-2of3 section-content-text">
 					
 					<form id="contactForm">
-		              <div class="form">
-		                <label for="contact_name">お名前</label>
-		                <input
-		                  name="name"
-		                  id="contact_name"
-		                  type="text"
-		                  placeholder="松島　圏"
-		                  value=""
-		                  data-required="true"
-		                />
+		              	<div class="form">
+		                
+				            <div class="input-container">
+				              <label for="contact_name">お名前</label>
+				              <input
+				                name="name"
+				                id="contact_name"
+				                type="text"
+				                placeholder="松島　圏"
+				                value=""
+				                data-required="true"
+				              />
+				            </div>
 
-		                <label for="contact_name">ふりがな</label>
-		                <input
-		                  name="name"
-		                  id="contact_name"
-		                  type="text"
-		                  placeholder="まつしま　けん"
-		                  value=""
-		                  data-required="true"
-		                />
+				            <div class="input-container">
+				                <label for="contact_furigana">ふりがな</label>
+				                <input
+				                  name="furigana"
+				                  id="contact_furigana"
+				                  type="text"
+				                  placeholder="まつしま　けん"
+				                  value=""
+				                  data-required="true"
+				                />
+				            </div>
 
-		                <label for="contact_email">メールアドレス</label>
-		                <input
-		                  name="email"
-		                  id="contact_email"
-		                  type="text"
-		                  placeholder="ken_matsu@ezweb.ne.jp"
-		                  value=""
-		                  data-required="true"
-		                  data-type="email"
-		                />
+				        <div class="input-container">
+			                <label for="contact_email">メールアドレス</label>
+			                <input
+			                  name="email"
+			                  id="contact_email"
+			                  type="text"
+			                  placeholder="ken_matsu@ezweb.ne.jp"
+			                  value=""
+			                  data-required="true"
+			                  data-type="email"
+			                />
+			            </div>
 
-		                <label for="contact_subject">件名</label>
-		                <select
-		                	id="contact_subject"
-		                	name="subject"
-		                >
-			                	<option>演奏依頼</option>
-			                	<option>稽古</option>
-			                	<option>その他</option>
-		                </select>
+			            <div class="input-container">
+			                <label for="contact_subject">件名</label>
+			                <select
+			                	id="contact_subject"
+			                	name="subject"
+			                	data-required="true"
+			                >
+				                	<option value="performance_request">演奏依頼</option>
+				                	<option value="lessons">稽古</option>
+				                	<option value="other">その他</option>
+			                </select>
+			            </div>
 
-		                <label for="contact_message">お問い合わせ内容</label>
-		                <textarea
-		                  name="message"
-		                  id="contact_message"
-		                  placeholder=""
-		                  data-trigger="change"
-		                  data-required="true"
-		                  data-minlength="3"
-		                  data-maxlength="10000"
-		                ></textarea>
+			            <div class="input-container hasTextarea">
+			                <label for="contact_message">お問い合わせ内容</label>
+			                <textarea
+			                  name="message"
+			                  id="contact_message"
+			                  placeholder=""
+			                  data-trigger="change"
+			                  data-required="true"
+			                  data-minlength="3"
+			                  data-maxlength="10000"
+			                ></textarea>
+			            </div>
 
 		                <a href="#contact" id="contact_sendBtn">送信</a>
-		                <!--<img class="ajaxSpinner" src="img/ajax-loader.gif" alt="Loading..." />-->
+		                <img class="ajaxSpinner" src="img/ajax-loader.gif" alt="Loading..." />
 		              </div>
-		              <!--
+		              
 		              <div class="formSubmitSuccessMsg">
-		                <h1>Thanks!</h1>
-		                <p>I'll get back to you as soon as I can!</p>
+		                <h2>ありがとうございました。</h2>
 		              </div>
-		              -->
+		              
 
 		            </form>
 		          </div>
@@ -359,6 +370,15 @@
 			</p>
 		</div>
 	</footer>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libraries/jquery-1.9.1.min.js"><\/script>')</script>
+
+    <!--<script src="js/libraries/bootstrap.min.js"></script>-->
+
+    <script src="js/plugins.js"></script>
+    <script src="js/siteUi.js"></script>
+
   </body>
 </html>
 
