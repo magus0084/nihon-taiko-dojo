@@ -1954,6 +1954,7 @@ be set to display none.
 
 .ajaxSpinner {
   display: none;
+  padding: 1em;
 }
 .formSubmitSuccessMsg {
   display: none;
@@ -1964,12 +1965,12 @@ be set to display none.
   position: absolute;
   top: -10px;
   right: 4px;
-  color: #b94a48;
-  max-width: 20em;
+  color: #fff;
+  font-weight: bold;
   min-height: 20px;
   line-height: 20px;
   padding: 10px;
-  font-size: 0.815em;
+  font-size: 0.9em;
   text-align: center;
   background: rgba(0, 0, 0, 0.667);
   border: none;

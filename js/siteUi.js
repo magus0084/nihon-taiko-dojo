@@ -22,6 +22,11 @@ var SiteUi = {
                 errorsWrapper: '<span></span>',
                 errorElem: '<span></span>'
             },
+            messages: {
+                required: '必要です。',
+                minlength: '3字少なくとも書いてください。',
+                type: { email: '合式なメールアドレスを書いてください。' }
+            },
 
             listeners: {
                 onFieldError: function ( elem, constraints, ParsleyField ) {
