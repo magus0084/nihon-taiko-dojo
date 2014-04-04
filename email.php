@@ -3,8 +3,8 @@
 //
 // 1. Make sure the form is only submitted from the appropriate URL
 //
-//$fromValidSourceUrl = preg_match( '`^(?:http://)?(?:www\.)?nihontaikodojo\.com/(?:index\.html)?$`', $_SERVER['HTTP_REFERER'] );
-$fromValidSourceUrl = preg_match( '`^(?:http://)?localhost/nihon-taiko-dojo/(?:index\.html)?$`', $_SERVER['HTTP_REFERER'] );
+$fromValidSourceUrl = preg_match( '`^(?:http://)?(?:www\.)?nihontaikodojo\.com/(?:index\.html)?$`', $_SERVER['HTTP_REFERER'] );
+//$fromValidSourceUrl = preg_match( '`^(?:http://)?localhost/nihon-taiko-dojo/(?:index\.html)?$`', $_SERVER['HTTP_REFERER'] );
 
 if ( $_POST && $fromValidSourceUrl ) {
     
