@@ -162,6 +162,16 @@ SLIDESHOWS
 	}
 }
 
+/******************************
+TABS
+******************************/
+
+#about-tabs {
+	background-color: black;
+	background-image: url($image-directory + 'about_tabbedBG.jpg');
+	padding-bottom: 25em;
+}
+
 /***********************
 CONTENT SECTIONS
 ***********************/
@@ -172,6 +182,8 @@ CONTENT SECTIONS
 
 #section-pieces {
 	.section-content-text {
+		padding-left: 2em;
+		padding-right: 2em;
 		margin-bottom: 0;
 	}
 }
@@ -183,6 +195,20 @@ SIDE GALLERIES & ASIDES
 
 
 
+
+
+/***********************
+SECTION SPECIFIC STYLES
+***********************/
+
+/* TOP */
+/* --- */
+
+#top-logo {
+	margin-top: -3.5em;
+	height: 7em;
+	@include transition($medium-transition);
+}
 
 
 

@@ -528,6 +528,10 @@ p {
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig"; }
 
+strong {
+  font-weight: bold;
+  color: #fdbf5d; }
+
 /******************************************************************
 Site Name:
 Author:
@@ -1306,12 +1310,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #fed167;
+  color: #fdbf5d;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #fec339; }
+    color: #fcad30; }
   a:link, a:visited:link {
     /*
     this highlights links on iPhones/iPads.
@@ -1562,7 +1566,7 @@ SLIDESHOWS
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .slideshow-controls li:hover {
-      background-color: #fed167;
+      background-color: #fdbf5d;
       cursor: pointer; }
     .slideshow-controls li.selected {
       background-color: #bfbfbf; }
@@ -1581,6 +1585,42 @@ SLIDESHOWS
 
 #top-image-4 {
   background-image: url("../../images/top_img4.jpg"); }
+
+/******************************
+TABS
+******************************/
+.tab-section {
+  background-position: bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  margin-top: 4em; }
+
+.tabs {
+  margin: 0 auto; }
+  .tabs li {
+    border: 1px solid #fdd79e;
+    color: #fdd79e;
+    background-color: #fdbf5d;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 0;
+    padding: 0.5em 1em; }
+    .tabs li.selected {
+      opacity: 1;
+      background: none;
+      border: none; }
+
+.tab-content {
+  display: none; }
+  .tab-content.selected {
+    display: block; }
+
+#about-tabs {
+  display: none;
+  /* Added this until tabs are finished.  Delete when tabs finished. */
+  background-color: black;
+  background-image: url("../../images/about_tabbedBG.jpg");
+  padding-bottom: 10em; }
 
 /******************************
 SECTION CONTENT GENERAL STYLES
@@ -1646,6 +1686,12 @@ SECTION SPECIFIC STYLES
   #top-logo img {
     height: 100%;
     width: auto; }
+
+/* ABOUT */
+/* ----- */
+#section-about .section-content-wrapper {
+  /* padding-bottom: 0; */
+  /* Comment out until tabs are finished */ }
 
 /* PIECES */
 /* ------ */
@@ -1863,8 +1909,16 @@ you can add resource intensive styles.
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .slideshow-controls li:hover {
-      background-color: #fed167;
+      background-color: #fdbf5d;
       cursor: pointer; }
+
+  /******************************
+  TABS
+  ******************************/
+  #about-tabs {
+    background-color: black;
+    background-image: url("../../images/about_tabbedBG.jpg");
+    padding-bottom: 25em; }
 
   /***********************
   CONTENT SECTIONS
@@ -1873,11 +1927,27 @@ you can add resource intensive styles.
     padding-top: 15em; }
 
   #section-pieces .section-content-text {
+    padding-left: 2em;
+    padding-right: 2em;
     margin-bottom: 0; }
 
   /***********************
   SIDE GALLERIES & ASIDES
   ***********************/
+  /***********************
+  SECTION SPECIFIC STYLES
+  ***********************/
+  /* TOP */
+  /* --- */
+  #top-logo {
+    margin-top: -3.5em;
+    height: 7em;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+
   /*********************
   FOOTER STYLES
   *********************/
@@ -1912,7 +1982,16 @@ you can add resource intensive styles.
   
   ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1040px; }
+
+  /***********************
+  SECTION SPECIFIC STYLES
+  ***********************/
+  /* TOP */
+  /* --- */
+  #top-logo {
+    margin-top: -4.5em;
+    height: 9em; } }
 /*********************
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.

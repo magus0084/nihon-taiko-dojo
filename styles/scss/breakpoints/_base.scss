@@ -429,6 +429,53 @@ SLIDESHOWS
 
 
 /******************************
+TABS
+******************************/
+
+.tab-section {
+	background-position: bottom;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	margin-top: 4em;
+}
+
+.tabs {
+	margin: 0 auto;
+	
+	li {
+		border: 1px solid $light-yellow;
+		color: $light-yellow;
+		background-color: $yellow;
+		opacity: 0.6;
+		text-align: center;
+		margin-top: 0;
+		padding: 0.5em 1em;
+		
+		&.selected {
+			opacity: 1;
+			background: none;
+			border: none;
+		}
+	}
+}
+
+.tab-content {
+	display: none;
+	
+	&.selected {
+		display: block;
+	}
+}
+
+#about-tabs {
+	display: none;			/* Added this until tabs are finished.  Delete when tabs finished. */
+	background-color: black;
+	background-image: url($image-directory + 'about_tabbedBG.jpg');
+	padding-bottom: 10em;
+}
+
+
+/******************************
 SECTION CONTENT GENERAL STYLES
 ******************************/
 
@@ -500,6 +547,14 @@ SECTION SPECIFIC STYLES
 	}
 }
 
+/* ABOUT */
+/* ----- */
+
+#section-about {
+	.section-content-wrapper {
+		/* padding-bottom: 0; */		/* Comment out until tabs are finished */
+	}
+}
 
 /* PIECES */
 /* ------ */
