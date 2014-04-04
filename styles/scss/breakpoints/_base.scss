@@ -181,7 +181,7 @@ NAVIGATION STYLES
 			padding: 0.75em;
 			font-weight: bold;
 
-			.selected {
+			&.selected {
 				@include selected-nav;
 			}
 			
