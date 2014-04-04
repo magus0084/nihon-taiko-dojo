@@ -11,7 +11,10 @@ var SiteUi = {
         $.localScroll({ duration: 400, easing: 'swing', hash: false });
 
         // Load scrollspy for nav
-        $('body').scrollspy({ target: '.header' })
+        $('body').scrollspy({ target: '.header' });
+
+        // Load carousel plugin
+        $('.slideshow').carousel();
 
     },
 
