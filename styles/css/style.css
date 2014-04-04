@@ -1931,3 +1931,100 @@ be set to display none.
   .respond-form,
   nav {
     display: none; } }
+
+
+/* CONTACT FORM STYLE */
+#contactForm {
+  padding-left: 1em;
+}
+#contactForm .input-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+#contactForm .hasTextarea {
+  max-width: 100% !important;
+}
+#contactForm label {
+  color: #fed167;
+  font-weight: bold;
+  line-height: 1.7;
+  font-size: 1.2em;
+}
+#contactForm input, #contactForm select, #contactForm textarea {
+  font-family: sans-serif !important;
+  background-color: #808080;
+  opacity: 0.9;
+}
+
+.ajaxSpinner {
+  display: none;
+  padding: 1em;
+}
+.formSubmitSuccessMsg {
+  display: none;
+}
+
+
+.parsley-error-list span {
+  position: absolute;
+  top: -10px;
+  right: 4px;
+  color: #fff;
+  font-weight: bold;
+  min-height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  font-size: 0.9em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.667);
+  border: none;
+  border-radius: 5px;
+  text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px 0px;
+}
+.parsley-error-list:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.667) transparent transparent transparent;
+  right: 2em;
+  top: 30px;
+}
+textarea ~ .parsley-error-list span {
+  float: right;
+  max-width: 100%;
+}
+textarea ~ .parsley-error-list span:after {
+  top: -20px;
+  left: auto;
+  right: 2em;
+  border-color: transparent transparent rgba(0, 0, 0, 0.667);
+}
+
+.parsley-error {
+  background-color: #f58080 !important;
+}
+
+#contact_sendBtn {
+  font-size: 1.333em;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  float: left;
+  width: 9em;
+  text-align: center;
+  background-color: #fcbe5d;
+  color: #7e5f2f;
+  font-family: @baseFontFamilyHeavy;
+  text-transform: uppercase;
+  margin: 0.413em 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+#contact_sendBtn:hover {
+  background-color: #DDA254;
+}
