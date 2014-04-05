@@ -533,10 +533,10 @@ SECTION CONTENT GENERAL STYLES
 	width: 100%;
 	background-color: $dark-gray;
 	background-position: top center;
-	background-size: 100% auto;
+	background-size: auto 400px;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	padding-top: 10em;
+	//background-attachment: fixed;		/* Remove this on mobile */
+	padding-top: 5em;
 }
 
 /* SECTION IMAGES */
