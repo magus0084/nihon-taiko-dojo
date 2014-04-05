@@ -480,7 +480,8 @@ table.data-table td a {
 CONTENT SECTIONS
 ***********************/
 .section {
-  padding-top: 15em; }
+  padding-top: 15em;
+  background-size: cover; }
 
 #section-pieces .section-content-text {
   padding-left: 2em;

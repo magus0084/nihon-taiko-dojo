@@ -1670,7 +1670,7 @@ SECTION CONTENT GENERAL STYLES
   width: 100%;
   background-color: #333333;
   background-position: top center;
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-top: 10em; }
@@ -1988,7 +1988,8 @@ you can add resource intensive styles.
   CONTENT SECTIONS
   ***********************/
   .section {
-    padding-top: 15em; }
+    padding-top: 15em;
+    background-size: cover; }
 
   #section-pieces .section-content-text {
     padding-left: 2em;
