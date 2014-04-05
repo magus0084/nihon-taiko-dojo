@@ -549,12 +549,8 @@ SECTION CONTENT GENERAL STYLES
 .section-content-wrapper {
 	width: 100%;
 	margin-top: 10em;
-	@include css-gradient(rgba(51,51,51, 0.7) 0%, $dark-gray 200px); 
 	padding-bottom: 3em;
-}
-
-.section-content-text {
-	padding-right: 3em;
+	@include css-gradient(rgba(51,51,51, 0.7) 0%, $dark-gray 200px); 
 }
 
 

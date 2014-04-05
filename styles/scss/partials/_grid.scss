@@ -53,6 +53,7 @@ them however you see fit.
 
   .m-all {
     @include grid-col;
+	padding-right: 0;
     width: 100%;
   }
 

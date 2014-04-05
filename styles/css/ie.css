@@ -484,6 +484,9 @@ CONTENT SECTIONS
   background-size: cover;
   background-attachment: fixed; }
 
+.section-content-text {
+  padding-right: 3em; }
+
 #section-pieces .section-content-text {
   padding-left: 2em;
   padding-right: 2em;
