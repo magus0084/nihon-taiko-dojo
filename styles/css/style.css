@@ -1640,6 +1640,9 @@ table.data-table {
     background-color: #bfbfbf;
     text-align: center;
     padding: 0.5em; }
+    table.data-table td a {
+      color: black;
+      text-decoration: underline; }
 
 th {
   font-weight: bold;
@@ -1967,6 +1970,19 @@ you can add resource intensive styles.
     background-color: black;
     background-image: url("../../images/about_tabbedBG.jpg");
     padding-bottom: 25em; }
+
+  /*********************
+  TABLES
+  *********************/
+  table.data-table td a {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    table.data-table td a:hover {
+      color: black;
+      background-color: #fdd79e; }
 
   /***********************
   CONTENT SECTIONS

@@ -490,6 +490,11 @@ table.data-table {
 		background-color: $light-gray;
 		text-align: center;
 		padding: 0.5em;
+		
+		a {
+			color: $black;
+			text-decoration: underline;
+		}
 	}
 }
 

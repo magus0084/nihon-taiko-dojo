@@ -172,6 +172,26 @@ TABS
 	padding-bottom: 25em;
 }
 
+
+/*********************
+TABLES
+*********************/
+
+table.data-table {
+
+	td {		
+		a {
+			@include transition($fast-transition);
+			
+			&:hover {
+				color: $black;
+				background-color: $light-yellow;
+			}
+		}
+	}
+}
+
+
 /***********************
 CONTENT SECTIONS
 ***********************/
