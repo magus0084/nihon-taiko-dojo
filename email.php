@@ -38,7 +38,7 @@ if ( $_POST && $fromValidSourceUrl ) {
         // 4. Email me
         //
         $date=date("F j, Y, g:i a");
-        $to="joeymigs@gmail.com";
+        $to="joeymigs@gmail.com,daisy1987linda@gmail.com";
         $re="NihonTaikoDojo.com: 日本太鼓道場のホームページからメセージが送りました。";
         $from="'Joe Mignano'<joeymigs@gmail.com>";
 
