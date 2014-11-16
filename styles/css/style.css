@@ -1387,7 +1387,7 @@ HEADER STYLES
 
 #nav-logo {
   display: inline-block;
-  padding: 0.67em 0 0.26em; }
+  padding: 0.75em 0; }
   #nav-logo a {
     color: white; }
 
@@ -1399,7 +1399,7 @@ NAVIGATION STYLES
   /* highlight current page */
   /* end current highlighters */ }
   .nav #nav-logo {
-    width: 9em;
+    width: 7em;
     height: auto; }
   .nav #navigation-list {
     display: none; }
@@ -1409,7 +1409,6 @@ NAVIGATION STYLES
   .nav .nav-right {
     float: right; }
   .nav li {
-    margin-left: 2em;
     /*
     so you really have to rethink your dropdowns for mobile.
     you don't want to have it expand too much because the
@@ -1682,9 +1681,6 @@ SECTION CONTENT GENERAL STYLES
 #section-sensei {
   background-image: url("../../images/sensei_feature.jpg"); }
 
-#section-performances {
-  background-image: url("../../images/performances_feature.jpg"); }
-
 #section-pieces {
   background-image: url("../../images/pieces_feature.jpg"); }
 
@@ -1721,6 +1717,12 @@ SECTION SPECIFIC STYLES
   height: 5em;
   width: 100%;
   text-align: center; }
+  #top-logo a {
+    border: none;
+    text-decoration: none; }
+    #top-logo a:visited {
+      border: none;
+      text-decoration: none; }
   #top-logo img {
     height: 100%;
     width: auto; }
@@ -1737,16 +1739,6 @@ SECTION SPECIFIC STYLES
   margin-top: 0; }
 #section-sensei .section-content > h4 {
   margin-bottom: 0.5em; }
-
-/* PERFORMANCES */
-/* ------------ */
-#section-performances h3 {
-  font-weight: bold;
-  margin-top: 2em; }
-#section-performances .performance-details {
-  margin-left: 1.5em; }
-#section-performances em {
-  color: #ddd; }
 
 /* PIECES */
 /* ------ */
@@ -1909,6 +1901,7 @@ you can add resource intensive styles.
     .nav li {
       display: inline-block;
       position: relative;
+      margin-left: 1.2em;
       /*
       plan your menus and drop-downs wisely.
       */
@@ -2063,6 +2056,13 @@ you can add resource intensive styles.
   .wrap {
     width: 1040px; }
 
+  /*********************
+  NAVIGATION STYLES
+  *********************/
+  .nav li {
+    margin-left: 2em;
+    font-size: 100%; }
+
   /***********************
   SECTION SPECIFIC STYLES
   ***********************/
@@ -2186,6 +2186,7 @@ be set to display none.
 
   @page {
     margin: 0.5cm; }
+
   p, h2, h3 {
     orphans: 3;
     widows: 3; }

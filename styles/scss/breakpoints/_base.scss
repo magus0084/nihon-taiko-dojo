@@ -172,7 +172,6 @@ NAVIGATION STYLES
 	}
 	
 	li {
-		margin-left: 2em;
 
 		a {
 			display: block;
@@ -587,6 +586,16 @@ SECTION SPECIFIC STYLES
 	width: 100%;
 	text-align: center;
 
+	a {
+		border: none;
+		text-decoration: none;
+		
+		&:visited {
+			border: none;
+			text-decoration: none;
+		}
+	}
+	
 	img {
 		height: 100%;
 		width: auto;
