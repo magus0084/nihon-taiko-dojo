@@ -391,6 +391,7 @@ NAVIGATION STYLES
   .nav li {
     display: inline-block;
     position: relative;
+    margin-left: 1.2em;
     /*
     plan your menus and drop-downs wisely.
     */
@@ -537,6 +538,13 @@ be seen on the Desktop.
 ******************************************************************/
 .wrap {
   width: 1040px; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav li {
+  margin-left: 2em;
+  font-size: 100%; }
 
 /***********************
 SECTION SPECIFIC STYLES
