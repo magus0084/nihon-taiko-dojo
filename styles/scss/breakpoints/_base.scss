@@ -645,6 +645,9 @@ SECTION SPECIFIC STYLES
 
 #studio-map {
 	border: $table-border;
+	.footnote {
+		color: $light-gray;
+	}
 }
 
 

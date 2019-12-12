@@ -535,6 +535,11 @@ strong {
   font-weight: bold;
   color: #fdbf5d; }
 
+hr {
+  margin: 1.5em 0;
+  border-color: #999999;
+}
+
 /******************************************************************
 Site Name:
 Author:
@@ -1753,6 +1758,9 @@ SECTION SPECIFIC STYLES
 /* ------- */
 #studio-map {
   border: 6px solid #222222; }
+#studio-map .footnote {
+  color: #bfbfbf;
+}
 
 /*********************
 FOOTER STYLES
